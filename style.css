@@ -1,0 +1,52 @@
+#profile-picture {
+    width: 180px;
+    height: 230px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    width: 100%;
+    background-color: rgb(24, 27, 27);
+    color: white;
+    margin-bottom: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.profile-quick-info {
+    text-align: center;
+    font-size: 32px;
+}
+
+.repo-component {
+    background-color: rgba(134, 165, 121, 0.418);
+    height: 50px;
+    padding: 8px;
+    margin: 5px;
+    width: 400px;
+}
+
+.repo-component p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+#github-repos {
+    height: 500px;
+    overflow-y: auto;
+    border: 1px solid;
+}
+
+#g-r-title {
+    background-color: rgb(24, 27, 27);
+    position: sticky;
+    top: 0;
+    background-color: r;
+    padding: 10px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* #g-r-title h1 {
+    color: white;
+} */
