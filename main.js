@@ -1,4 +1,4 @@
-import { getRepos } from "./modules/data.js";
+import { getAcademicData, getRepos } from "./modules/data.js";
 
 const reposContainer = document.getElementById('github-repos')
 
@@ -24,3 +24,20 @@ getRepos().then(repos => {
 
     reposContainer.appendChild(errorComponent)
 });
+
+// display academics data
+const academicData = getAcademicData()
+
+const academicHistory = document.getElementById('academic-history')
+
+academicData.forEach(data => {
+    const aDComponent = document.createElement('div')
+    aDComponent.setAttribute('class', 'academic-component')
+    aDComponent.innerHTML = `
+        <p class='course'>${data.course}</p>
+        <p class='school'>${data.school}</p>
+        <p class='duration'>${data.duration}</p>
+    `
+
+    academicHistory.appendChild(aDComponent)
+})

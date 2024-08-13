@@ -18,3 +18,18 @@ export function getRepos() {
         xhr.send();
     });
 }
+
+export function getAcademicData() {
+    return [
+        {
+            course: 'Bachelors Degree: Mechanical and Manufacturing Engineering',
+            school: 'Multimedia University of Kenya',
+            duration: '2018 - 2023'
+        },
+        {
+            course: 'Certificate in Java Programming',
+            school: 'East African Institute of Certified Studies',
+            duration: 'July 2018 - August 2018'
+        }
+    ]
+}
