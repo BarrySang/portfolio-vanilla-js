@@ -33,3 +33,23 @@ export function getAcademicData() {
         }
     ]
 }
+
+export function getWorkExperience() {
+    return [
+        {
+            organization: 'DigitalSelf',
+            position: 'Front End Web Developer',
+            duration: ''
+        },
+        {
+            organization: 'Studio48',
+            position: 'Back-end Web Developer',
+            duration: ''
+        },
+        {
+            organization: 'Kapsabet Bible College',
+            position: 'Volunteer Computer Teacher',
+            duration: ''
+        }
+    ]
+}

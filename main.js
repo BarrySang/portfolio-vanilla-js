@@ -1,4 +1,4 @@
-import { getAcademicData, getRepos } from "./modules/data.js";
+import { getAcademicData, getRepos, getWorkExperience } from "./modules/data.js";
 
 const reposContainer = document.getElementById('github-repos')
 
@@ -40,4 +40,21 @@ academicData.forEach(data => {
     `
 
     academicHistory.appendChild(aDComponent)
+})
+
+// display work history
+const workHistoryComponent = document.getElementById('work-history')
+
+const wHData = getWorkExperience()
+
+wHData.forEach(data => {
+    const wHComponent = document.createElement('div')
+    wHComponent.setAttribute('class', 'whistory-component')
+    wHComponent.innerHTML = `
+        <p class='organization'>${data.organization}</p>
+        <p class='position'>${data.position}</p>
+        <p class='duration'>${data.duration}</p>
+    `
+
+    workHistoryComponent.appendChild(wHComponent)
 })
