@@ -1,6 +1,6 @@
 import { getAcademicData, getRepos, getWorkExperience } from "./modules/data.js";
 
-const reposContainer = document.getElementById('github-repos')
+const reposDataContainer = document.getElementById('g-r-data')
 
 // display repositories
 getRepos().then(repos => {
@@ -12,7 +12,7 @@ getRepos().then(repos => {
             <p>${repository.name}</p>
         `
         
-        reposContainer.appendChild(repoComponent)
+        reposDataContainer.appendChild(repoComponent)
     })
 }).catch(error => {
     console.error(error);
@@ -28,7 +28,7 @@ getRepos().then(repos => {
 // display academics data
 const academicData = getAcademicData()
 
-const academicHistory = document.getElementById('academic-history')
+const aHDataContainer = document.getElementById('a-h-data')
 
 academicData.forEach(data => {
     const aDComponent = document.createElement('div')
@@ -39,11 +39,11 @@ academicData.forEach(data => {
         <p class='duration'>${data.duration}</p>
     `
 
-    academicHistory.appendChild(aDComponent)
+    aHDataContainer.appendChild(aDComponent)
 })
 
 // display work history
-const workHistoryComponent = document.getElementById('work-history')
+const workHistoryContainer = document.getElementById('w-h-data')
 
 const wHData = getWorkExperience()
 
@@ -56,5 +56,14 @@ wHData.forEach(data => {
         <p class='duration'>${data.duration}</p>
     `
 
-    workHistoryComponent.appendChild(wHComponent)
+    workHistoryContainer.appendChild(wHComponent)
 })
+
+document.querySelectorAll('.section-item-title').forEach(function(div) {
+    div.addEventListener('click', function() {
+        console.log('clicked')
+        const content = this.nextElementSibling;
+        content.classList.toggle('show'); // Toggle the 'show' class on the content
+        this.classList.toggle('active'); // Optionally toggle an 'active' class on c-div
+    });
+});

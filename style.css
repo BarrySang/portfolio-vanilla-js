@@ -10,6 +10,9 @@ header {
     background-color: rgb(24, 27, 27);
     color: white;
     margin-bottom: 5px;
+}
+
+header, .repo-component p, .academic-component p, .whistory-component p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -18,16 +21,17 @@ header {
     font-size: 32px;
 }
 
-.repo-component {
+.repo-component, .academic-component, .whistory-component {
     background-color: rgba(134, 165, 121, 0.418);
+}
+
+.repo-component {
     height: 50px;
     padding: 8px;
     margin: 5px;
-    width: 400px;
 }
 
 .repo-component p {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
 }
 
@@ -50,6 +54,15 @@ header {
 /* #g-r-title h1 {
     color: white;
 } */
+.whistory-component {
+    padding: 10px;
+    margin: 5px;
+}
+
+.academic-component {
+    padding: 8px;
+    margin: 5px;
+}
 
 /* Mobile phones (portrait and landscape) */
 @media (max-width: 599px) {
@@ -68,6 +81,22 @@ header {
     #github-repos div {
         width: 100%;
     }
+
+    .section-component-data {
+        display: none;
+    }
+
+    .section-component-data.show {
+        display: block; /* Show content when this class is added */
+    }
+
+    #github-repos {
+        height: fit-content;
+    }
+
+    .section-item-title {
+        margin-bottom: 5px;
+    }
 }
 
 /* Tablets (portrait and landscape) */
@@ -82,7 +111,6 @@ header {
     }
 
     .academic-component {
-        background-color: rgba(134, 165, 121, 0.418);
         padding: 10px;
         margin: 5px;
     }
@@ -92,8 +120,28 @@ header {
     }
 
     .academic-component p {
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-size: 16px;
+    }
+
+    #github-repos {
+        grid-column: 1 / 2; /* Spans the first column */
+        grid-row: 1 / 3; /* Spans both rows (full height) */
+        height: 1000px;
+    }
+
+    #work-history {
+        grid-column: 2 / 3; /* Spans the second column */
+        grid-row: 1 / 2; /* First row in the second column */
+        margin-bottom: 0;
+    }
+
+    #academic-history {
+        grid-column: 2 / 3; /* Spans the second column */
+        grid-row: 2 / 3; /* Second row in the second column */
+    }
+
+    .repo-component {
+        padding: 5px;
     }
 }
 
@@ -110,16 +158,11 @@ header {
         grid-template-rows: 1fr 1fr;
     }
 
-    .repo-component {
-        width: 100%;
-    }
-
     .section-component {
         height: 500px;
     }
 
     .academic-component {
-        background-color: rgba(134, 165, 121, 0.418);
         padding: 10px;
         margin: 5px;
     }
@@ -129,15 +172,11 @@ header {
     }
 
     .academic-component p {
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        
         font-size: 16px;
     }
 
-    .whistory-component {
-        background-color: rgba(134, 165, 121, 0.418);
-        padding: 10px;
-        margin: 5px;
-    }
+    
 
     #github-repos {
         grid-column: 1 / 2; /* Spans the first column */
