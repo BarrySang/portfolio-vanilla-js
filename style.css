@@ -12,7 +12,7 @@ header {
     margin-bottom: 5px;
 }
 
-header, .repo-component p, .academic-component p, .whistory-component p {
+header, .repo-component p, .academic-component p, .whistory-component p, .error-component p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -21,8 +21,16 @@ header, .repo-component p, .academic-component p, .whistory-component p {
     font-size: 32px;
 }
 
-.repo-component, .academic-component, .whistory-component {
+.repo-component, .academic-component, .whistory-component, .error-component {
     background-color: rgba(134, 165, 121, 0.418);
+}
+
+.error-component {
+    padding: 5px;
+}
+
+.error-component h1 {
+    border-top: 1px solid;
 }
 
 .repo-component {
