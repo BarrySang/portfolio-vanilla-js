@@ -23,6 +23,12 @@ header, .repo-component p, .academic-component p, .whistory-component p, .error-
 
 .repo-component, .academic-component, .whistory-component, .error-component {
     background-color: rgba(134, 165, 121, 0.418);
+    border-radius: 4px;
+}
+
+.section-item-title {
+    border-radius: 5px;
+    margin: 5px;
 }
 
 .error-component {
