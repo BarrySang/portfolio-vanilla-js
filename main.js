@@ -39,14 +39,3 @@ document.querySelectorAll('.parent-toggler').forEach(function(div) {
         this.classList.toggle('active'); // Optionally toggle an 'active' class on c-div
     });
 });
-
-// when parent toggler is clicked, add 'mobile-show' class to caret-right, and remove 'mobile-show' from caret-down
-
-// document.querySelectorAll('.profile-element-icon').forEach((iconElement) => {
-// iconElement.addEventListener('click', function() {
-//     const content = this.nextElementSibling
-//     console.log(content)
-
-//     content.classList.toggle('show')
-// })
-// })
