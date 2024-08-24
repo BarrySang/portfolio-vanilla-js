@@ -5,7 +5,7 @@
 
 header {
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 0.3fr 0.7fr;
     width: 100%;
     background-color: rgb(24, 27, 27);
     color: white;
@@ -21,6 +21,15 @@ header, .repo-component p, .academic-component p, .whistory-component p, .error-
     font-size: 32px;
 }
 
+.profile-quick-info a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
 .repo-component, .academic-component, .whistory-component, .error-component {
     background-color: rgba(134, 165, 121, 0.418);
     border-radius: 4px;
@@ -29,6 +38,13 @@ header, .repo-component p, .academic-component p, .whistory-component p, .error-
 .section-item-title {
     border-radius: 5px;
     margin: 5px;
+}
+
+
+
+.profile-element-icon svg {
+    width: 50px;
+    height: 50px;
 }
 
 .error-component {
@@ -82,8 +98,43 @@ header, .repo-component p, .academic-component p, .whistory-component p, .error-
     display: none;
 }
 
+
+
 /* Mobile phones (portrait and landscape) */
 @media (max-width: 599px) {
+    .header {
+        padding-right: 5px;
+    }
+
+    .profile-element-icon {
+        display: flex;
+        justify-content: left;
+        /* justify-content: center; */
+        align-items: center;
+        padding-right: 5px;
+    }
+
+    .profile-element {
+        display: grid;
+        grid-template-columns: 0.1fr 0.9fr;
+        
+    }
+
+    .profile-quick-info p {
+        font-size: 12px;
+        
+    }
+
+    .profile-element-icon svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    
+    
+    .profile-element-content.show {
+        display: block; /* Show content when this class is added */
+    }
 
     .mobile-opened {
         transition: transform 0.3s;
@@ -143,6 +194,24 @@ header, .repo-component p, .academic-component p, .whistory-component p, .error-
 
 /* Tablets (portrait and landscape) */
 @media (min-width: 600px) and (max-width: 1023px) {
+    .profile-element {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+
+    .profile-element-icon {
+        display: flex;
+        justify-content: end;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    .profile-element {
+        display: grid;
+        grid-template-columns: 0.2fr 0.8fr;
+    }
+
     section {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -189,6 +258,23 @@ header, .repo-component p, .academic-component p, .whistory-component p, .error-
 
 /* Computer screens */
 @media (min-width: 1024px) {
+    .profile-element {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+
+    .profile-element-icon {
+        display: flex;
+        justify-content: end;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    .profile-element-icon {
+        padding-right: 5px;
+    }
+
     .container {
         width: 75%;
         margin: auto;
