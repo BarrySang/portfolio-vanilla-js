@@ -7,7 +7,7 @@ header {
     display: grid;
     grid-template-columns: 0.3fr 0.7fr;
     width: 100%;
-    background-color: rgb(24, 27, 27);
+    background-color: rgba(218, 217, 235, 0.795);
     color: white;
     margin-bottom: 5px;
 }
@@ -19,11 +19,12 @@ header, .repo-component p, .academic-component p, .whistory-component p, .error-
 .profile-quick-info {
     text-align: center;
     font-size: 32px;
+    color: black;
 }
 
 .profile-quick-info a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 
@@ -31,7 +32,7 @@ header, .repo-component p, .academic-component p, .whistory-component p, .error-
 
 
 .repo-component, .academic-component, .whistory-component, .error-component {
-    background-color: rgba(134, 165, 121, 0.418);
+    background-color: rgba(231, 236, 238, 0.418);
     border-radius: 4px;
 }
 
@@ -72,12 +73,12 @@ header, .repo-component p, .academic-component p, .whistory-component p, .error-
 }
 
 .section-item-title {
-    background-color: rgb(24, 27, 27);
+    background-color: rgb(238, 231, 231);
     /* position: sticky;
     top: 0; */
     background-color: r;
     padding: 10px;
-    color: white;
+    color: black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -189,6 +190,10 @@ header, .repo-component p, .academic-component p, .whistory-component p, .error-
 
     .section-item-title {
         margin-bottom: 5px;
+    }
+
+    .section-item-title h1 {
+        font-weight: lighter;
     }
 }
 
